@@ -122,9 +122,9 @@ export default function AnalyticsPage() {
                   <Tooltip 
                     contentStyle={{ backgroundColor: "rgba(0,0,0,0.8)", border: "1px solid #27272a", borderRadius: "8px", backdropFilter: "blur(10px)" }}
                     itemStyle={{ fontSize: "10px", fontWeight: "bold", textTransform: "uppercase" }}
-                    formatter={(value: any, name: string, props: any) => {
+                    formatter={(value: any, name: any) => {
                       if (name === "liquidity") return [`$${value.toLocaleString()}`, "Net Flow"];
-                      return [value, name];
+                      return [value, `${name}`];
                     }}
                     labelFormatter={(label, payload) => {
                       if (payload && payload[0]) {
