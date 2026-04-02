@@ -410,7 +410,7 @@ export default function DashboardHome() {
                               dataKey="value"
                               stroke="none"
                             >
-                              {categoryData.map((entry, index) => (
+                              {categoryData.map((entry: any, index: number) => (
                                 <Cell key={`cell-${index}`} fill={entry.color} />
                               ))}
                             </Pie>
@@ -422,7 +422,7 @@ export default function DashboardHome() {
                         </ResponsiveContainer>
                       </div>
                       <div className="space-y-2.5 mt-4">
-                        {categoryData.slice(0, 4).map((c) => (
+                        {categoryData.slice(0, 4).map((c: any) => (
                           <div key={c.name} className="flex items-center justify-between text-[9px] font-mono transition-opacity">
                             <div className="flex items-center gap-2">
                               <div className="w-2 h-2 rounded-full" style={{ backgroundColor: c.color }} />
